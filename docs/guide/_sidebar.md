@@ -7,6 +7,7 @@
      - [<span class="iconfont icon-component"></span> 身份认证](guide/usage?id=key-身份认证)
      - [<span class="iconfont icon-intro1"></span> 数据安全](guide/usage?id=dvd-数据安全)
      - [<span class="iconfont icon-satellite"></span> 上网安全](guide/usage?id=globe_with_meridians-上网安全)
+     - [<span class="iconfont icon-more"></span> 终端安全](guide/usage?id=computer-终端安全)
   - [<span class="iconfont icon-alert"></span> 快速入门](guide/begin.md)
      - [<span class="iconfont icon-crown"></span> 平台安装](guide/begin?id=lemon平台安装)
      - [<span class="iconfont icon-matrix"></span> 登录管理](guide/begin?id=melon-使用管理)

@@ -1,0 +1,6 @@
+{
+  "version": 2010,
+  "url_windows": "https://tianji.uusec.com/download/updater.exe",
+  "url_darwin": "https://tianji.uusec.com/download/updater_darwin",
+  "url_linux": "https://tianji.uusec.com/download/updater_linux"
+}
