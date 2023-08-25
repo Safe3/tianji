@@ -1,0 +1,57 @@
+﻿networks:
+  tjnet:
+    name: tjnet
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - gateway: 172.33.0.1
+        subnet: 172.33.0.0/24
+    driver_opts:
+      com.docker.network.bridge.name: tjnet
+
+services:
+  tj-osg:
+   image: uusec/tianji:latest
+   ulimits:
+     nproc: 65535
+     nofile:
+       soft: 102400
+       hard: 102400
+   container_name: tj-osg
+   networks:
+      tjnet:
+   ports:
+     - "80:80"
+     - "443:443"
+   volumes:
+     - tjdatav:/uuwaf
+   command: ["/run.sh"]
+   environment:
+     - TZ=Asia/Shanghai
+     - TIANJI_MYSQL_PASSWORD=dzsTkYWfTavL3.Wv
+     - TIANJI_SMTP_SERVER=smtp.uusec.com:587
+     - TIANJI_SMTP_USERNAME=tianji@uusec.com
+     - TIANJI_SMTP_PASSWORD=abcdefghigklm
+
+   links:
+   - tj-db
+   depends_on:
+      - tj-db
+
+  tj-db:
+   image: percona:8
+   container_name: tj-db
+   networks:
+      tjnet:
+   volumes:
+     - tjdatav:/docker-entrypoint-initdb.d
+     - tjdbv:/var/lib/mysql
+   environment:
+     - TZ=Asia/Shanghai
+     - INIT_ROCKSDB
+     - MYSQL_ROOT_PASSWORD=dzsTkYWfTavL3.Wv
+
+volumes:
+  tjdatav:
+  tjdbv:
