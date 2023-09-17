@@ -5,7 +5,7 @@
 
 
 ##  :lemon:平台安装 <!-- {docsify-ignore} -->
-?> 首先下载天机平台安装包，下载地址： [https://tianji.uusec.com/download/tianji.v2.1.0.zip](https://tianji.uusec.com/download/tianji.v2.1.0.zip)。根据安装包内的《天机办公安全平台安装手册》进行安装配置。
+?> 首先下载天机平台安装包，下载地址： [https://tianji.uusec.com/download/tianji.v2.2.0.zip](https://tianji.uusec.com/download/tianji.v2.2.0.zip)。根据安装包内的《天机办公安全平台安装手册》进行安装配置。
 
 
 
