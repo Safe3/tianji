@@ -46,7 +46,7 @@
 
 ## :kissing_heart: 加入讨论
 
-欢迎各位就 法海 的各种bug或功能需求及使用问题，在如下渠道参与讨论
+欢迎各位就 **天机** 的各种bug或功能需求及使用问题，在如下渠道参与讨论
 
 - 问题提交：https://github.com/Safe3/tianji/issues
 
