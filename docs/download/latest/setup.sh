@@ -42,23 +42,6 @@ command_exists() {
 	command -v "$1" 2>&1
 }
 
-check_container_health() {
-    local container_name=$1
-    local max_retry=30
-    local retry=0
-    local health_status="unhealthy"
-    info "Waiting for $container_name to be healthy"
-    while [[ "$health_status" == "unhealthy" && $retry -lt $max_retry ]]; do
-        health_status=$(docker inspect --format='{{.State.Health.Status}}' $container_name 2>/dev/null || info 'unhealthy')
-        sleep 5
-        retry=$((retry+1))
-    done
-    if [[ "$health_status" == "unhealthy" ]]; then
-        abort "Container $container_name is unhealthy"
-    fi
-    info "Container $container_name is healthy"
-}
-
 space_left() {
     dir="$1"
     while [ ! -d "$dir" ]; do
@@ -346,12 +329,9 @@ touch "$tianji_path/resources/config.json"
 
 info "即将开始下载 Docker 镜像"
 $compose_command up -d
-
 if [ $? -ne "0" ]; then
     abort "启动 Docker 容器失败"
 fi
-
-check_container_health tianji-pg
 
 success "天机办公安全网关社区版安装成功！"
 warning "请安装配置客户端后，通过以下网址访问控制台："
