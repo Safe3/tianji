@@ -282,7 +282,7 @@ while true; do
 
     tianji_path=$input_path
 
-    if confirm "目录 '$tianji_path' 当前剩余存储空间为 `space_left \"$tianji_path\"` ，雷池至少需要 5G，是否确定"; then
+    if confirm "目录 '$tianji_path' 当前剩余存储空间为 `space_left \"$tianji_path\"` ，天机至少需要 5G，是否确定"; then
         break
     fi
 done
@@ -323,6 +323,7 @@ while true; do
         continue
     fi
     echo "TIANJI_MAIL_SERVER=$tianji_mail_server" >> .env
+    break
 done
 
 while true; do
@@ -333,6 +334,7 @@ while true; do
         continue
     fi
     echo "TIANJI_MAIL_USERNAME=$tianji_mail_username" >> .env
+    break
 done
 
 echo -e -n "\033[34m[天机] 请输入邮件用户密码: \033[0m"
