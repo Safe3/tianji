@@ -30,7 +30,6 @@ warning() {
 }
 
 abort() {
-    qrcode
     echo -e "\033[31m[天机] $*\033[0m"
     exit 1
 }
@@ -263,7 +262,7 @@ fi
 tianji_path='/opt/tianji'
 
 while true; do
-    echo -e -n "\033[34m[天机] 安装目录 (留空则为 '$tianji_path'): \033[0m"
+    echo -e -n "\033[34m[天机] 请输入安装目录 (留空则为 '$tianji_path'): \033[0m"
     read input_path
     [[ -z "$input_path" ]] && input_path=$tianji_path
 
@@ -312,13 +311,13 @@ echo "POSTGRES_PASSWORD=$(LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 32)"
 echo "SUBNET_PREFIX=$SUBNET_PREFIX" >> .env
 echo "IMAGE_PREFIX=swr.cn-south-1.myhuaweicloud.com/uusec" >>".env"
 
-echo -e -n "\033[34m[天机] 邮件服务器地址: \033[0m"
+echo -e -n "\033[34m[天机] 请输入邮件服务器地址: \033[0m"
 read tianji_mail_server
 echo "TIANJI_MAIL_SERVER=$tianji_mail_server" >> .env
-echo -e -n "\033[34m[天机] 邮件用户名称: \033[0m"
+echo -e -n "\033[34m[天机] 请输入邮件用户名称: \033[0m"
 read tianji_mail_username
 echo "TIANJI_MAIL_USERNAME=$tianji_mail_username" >> .env
-echo -e -n "\033[34m[天机] 邮件用户密码: \033[0m"
+echo -e -n "\033[34m[天机] 请输入邮件用户密码: \033[0m"
 read tianji_mail_password
 echo "TIANJI_MAIL_PASSWORD=$tianji_mail_password" >> .env
 
