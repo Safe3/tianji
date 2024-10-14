@@ -22,7 +22,7 @@ confirm() {
 }
 
 success() {
-    echo -e "\032[34m[天机] $*\033[0m"
+    echo -e "\033[32m[天机] $*\033[0m"
 }
 
 info() {
