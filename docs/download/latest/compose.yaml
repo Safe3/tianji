@@ -48,4 +48,5 @@ services:
       nofile: 131072
     network_mode: host
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
