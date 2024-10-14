@@ -1,0 +1,49 @@
+networks:
+  tianji-net:
+    name: tianji-net
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - gateway: ${SUBNET_PREFIX:?SUBNET_PREFIX required}.1
+          subnet: ${SUBNET_PREFIX}.0/24
+    driver_opts:
+      com.docker.network.bridge.name: tianji-net
+
+services:
+  postgres:
+    container_name: tianji-pg
+    restart: always
+    image: ${IMAGE_PREFIX}/postgres:16-alpine
+    volumes:
+      - ${TIANJI_DIR}/resources/data:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - POSTGRES_USER=tianji
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?postgres password required}
+      - POSTGRES_DB=tianji
+    networks:
+      tianji-net:
+        ipv4_address: ${SUBNET_PREFIX}.2
+    ports:
+      - "5432:5432"
+    command: [postgres, -c, max_connections=256]
+    healthcheck:
+      test: pg_isready -U tianji -d tianji
+  gateway:
+    container_name: tianji-osg
+    restart: always
+    image: ${IMAGE_PREFIX}/tianji:${IMAGE_TAG:?image tag required}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/resolv.conf:/etc/resolv.conf:ro
+      - ${TIANJI_DIR}/resources/config.json:/uuwaf/config.json
+      - ${TIANJI_DIR}/resources/dns/conf:/uuwaf/dns/conf
+    environment:
+      - TIANJI_DSN=postgres://tianji:${POSTGRES_PASSWORD}@127.0.0.1/tianji?sslmode=disable
+      - TIANJI_MAIL_SERVER=${TIANJI_MAIL_SERVER:?mail server required}
+      - TIANJI_MAIL_USERNAME=${TIANJI_MAIL_USERNAME:?mail username required}
+      - TIANJI_MAIL_PASSWORD=${TIANJI_MAIL_PASSWORD:?mail password required}
+    ulimits:
+      nofile: 131072
+    network_mode: host
