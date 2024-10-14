@@ -315,15 +315,32 @@ echo "POSTGRES_PASSWORD=$(LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 32)"
 echo "SUBNET_PREFIX=$SUBNET_PREFIX" >> .env
 echo "IMAGE_PREFIX=swr.cn-south-1.myhuaweicloud.com/uusec" >>".env"
 
-echo -e -n "\033[34m[天机] 请输入邮件服务器地址: \033[0m"
-read tianji_mail_server
-echo "TIANJI_MAIL_SERVER=$tianji_mail_server" >> .env
-echo -e -n "\033[34m[天机] 请输入邮件用户名称: \033[0m"
-read tianji_mail_username
-echo "TIANJI_MAIL_USERNAME=$tianji_mail_username" >> .env
+while true; do
+    echo -e -n "\033[34m[天机] 请输入邮件服务器地址: \033[0m"
+    read tianji_mail_server
+    if [[ ! $tianji_mail_server == *:* ]]; then
+        warning "'$tianji_mail_server' 不是完整的邮件服务器地址"
+        continue
+    fi
+    echo "TIANJI_MAIL_SERVER=$tianji_mail_server" >> .env
+done
+
+while true; do
+    echo -e -n "\033[34m[天机] 请输入邮件用户名称: \033[0m"
+    read tianji_mail_username
+    if [[ ! $tianji_mail_username == *@* ]]; then
+        warning "'$tianji_mail_username' 不是完整的邮件用户名称"
+        continue
+    fi
+    echo "TIANJI_MAIL_USERNAME=$tianji_mail_username" >> .env
+done
+
 echo -e -n "\033[34m[天机] 请输入邮件用户密码: \033[0m"
 read tianji_mail_password
 echo "TIANJI_MAIL_PASSWORD=$tianji_mail_password" >> .env
+
+mkdir -p "$tianji_path/resources"
+touch "$tianji_path/resources/config.json"
 
 info "即将开始下载 Docker 镜像"
 $compose_command up -d

@@ -16,6 +16,12 @@ fi
 SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd  "$SCRIPT_PATH"
 
+DC_CMD="docker compose"
+$DC_CMD version > /dev/null 2>&1
+if [ $? -ne "0" ]; then
+	abort "你的Docker版本过低，缺少docker compose命令，请卸载后安装最新版本"
+fi
+
 stop_tianji(){
 	$DC_CMD down
 }
