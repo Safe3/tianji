@@ -47,3 +47,5 @@ services:
     ulimits:
       nofile: 131072
     network_mode: host
+    depends_on:
+      - postgres

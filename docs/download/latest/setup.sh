@@ -21,6 +21,10 @@ confirm() {
     esac
 }
 
+success() {
+    echo -e "\032[34m[天机] $*\033[0m"
+}
+
 info() {
     echo -e "\033[37m[天机] $*\033[0m"
 }
@@ -330,8 +334,8 @@ fi
 
 check_container_health tianji-pg
 
-warning "天机办公安全网关社区版安装成功！"
-warning "请安装配置客户端后访问以下地址访问控制台："
+success "天机办公安全网关社区版安装成功！"
+warning "请安装配置客户端后，通过以下网址访问控制台："
 warning "https://tj.local/"
-warning "天机Docker管理和更新请使用以下shell脚本："
+warning "天机 Docker 管理和更新，请使用以下shell脚本："
 warning "$tianji_path/admin.sh"
