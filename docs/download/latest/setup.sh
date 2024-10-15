@@ -278,13 +278,21 @@ info "创建安装目录 '$tianji_path' 成功"
 cd "$tianji_path"
 
 curl "https://tianji.uusec.com/download/latest/compose.yaml" -sSLk -o compose.yaml
-curl "https://tianji.uusec.com/download/latest/admin.sh" -sSLk -o admin.sh
-chmod +x admin.sh
-
 if [ $? -ne "0" ]; then
     abort "下载 compose.yaml 脚本失败"
 fi
 info "下载 compose.yaml 脚本成功"
+curl "https://tianji.uusec.com/download/latest/admin.sh" -sSLk -o admin.sh
+chmod +x admin.sh
+curl "https://tianji.uusec.com/download/latest/resources.tgz" -sSLk -o resources.tgz
+if [ -z `command_exists tar` ]; then
+    $( command -v yum || command -v apt-get ) install -y tar
+fi
+tar -zxf resources.tgz && rm -f resources.tgz
+if [ $? -ne "0" ]; then
+    abort "解压 resources.tgz 资源文件失败"
+fi
+info "下载 resources.tgz 资源文件成功"
 
 touch ".env"
 if [ $? -ne "0" ]; then
@@ -323,9 +331,6 @@ done
 echo -e -n "\033[34m[天机] 请输入邮件用户密码: \033[0m"
 read tianji_mail_password
 echo "TIANJI_MAIL_PASSWORD=$tianji_mail_password" >> .env
-
-mkdir -p "$tianji_path/resources"
-touch "$tianji_path/resources/config.json"
 
 info "即将开始下载 Docker 镜像"
 $compose_command up -d
