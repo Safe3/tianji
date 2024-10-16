@@ -30,6 +30,10 @@ services:
     command: [postgres, -c, max_connections=256]
     healthcheck:
       test: pg_isready -U tianji -d tianji
+      start_period: 3s
+      interval: 5s
+      timeout: 3s
+      retries: 7
   gateway:
     container_name: tianji-osg
     restart: always
