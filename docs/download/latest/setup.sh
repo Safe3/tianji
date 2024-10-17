@@ -229,7 +229,7 @@ fi
 docker network rm tianji-net 2>/dev/null
 
 ips=`local_ips`
-subnets="172.22.222 169.254.222 192.168.222"
+subnets="172.31.255 169.254.255 192.168.255"
 
 for subnet in $subnets; do
     if [[ $ips != *$subnet* ]]; then
