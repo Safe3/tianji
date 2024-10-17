@@ -1,8 +1,8 @@
 - <span class="iconfont icon-atom"></span> 指南
   - [<span class="iconfont icon-fly"></span> 产品简介](guide/)
      - [<span class="iconfont icon-page"></span> 技术优势](guide/#dart-技术优势)
-     - [<span class="iconfont icon-star"></span> 功能对比](guide/#fire-功能对比)
      - [<span class="iconfont icon-mix"></span> 界面预览](guide/#art-界面预览)
+     - [<span class="iconfont icon-star"></span> 功能对比](guide/#fire-功能对比)
   - [<span class="iconfont icon-router"></span> 使用场景](guide/usage.md)
      - [<span class="iconfont icon-component"></span> 身份认证](guide/usage?id=key-身份认证)
      - [<span class="iconfont icon-intro1"></span> 数据安全](guide/usage?id=dvd-数据安全)
