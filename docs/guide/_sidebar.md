@@ -5,7 +5,7 @@
      - [<span class="iconfont icon-mix"></span> 界面预览](guide/#art-界面预览)
   - [<span class="iconfont icon-alert"></span> 快速入门](guide/begin.md)
      - [<span class="iconfont icon-crown"></span> 安装网关](guide/begin?id=lemon安装网关)
-     - [<span class="iconfont icon-matrix"></span> 安装客户端](guide/begin?id=melon-安装客户端)
+     - [<span class="iconfont icon-matrix"></span> 安装客户端](guide/begin?id=melon安装客户端)
   - [<span class="iconfont icon-router"></span> 使用场景](guide/usage.md)
      - [<span class="iconfont icon-component"></span> 身份认证](guide/usage?id=key-身份认证)
      - [<span class="iconfont icon-intro1"></span> 数据安全](guide/usage?id=dvd-数据安全)
