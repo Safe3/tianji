@@ -46,6 +46,8 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 - 苹果系统：[https://tianji.uusec.com/download/latest/tianji-setup.pkg](https://tianji.uusec.com/download/latest/tianji-setup.pkg)
 - Linux系统：仅供商业用户
 
+
+
 ## :peach:开始使用 <!-- {docsify-ignore} -->
 
 ?> 请提前在手机上安装一个动态口令软件如 [FreeOTP](https://freeotp.github.io/) 或 Google Authenticator 等
