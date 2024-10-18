@@ -1,11 +1,11 @@
 - <span class="iconfont icon-atom"></span> 指南
-  - [<span class="iconfont icon-fly"></span> 产品简介](guide/)
+  - [<span class="iconfont icon-crown"></span> 产品简介](guide/)
      - [<span class="iconfont icon-page"></span> 技术优势](guide/#dart-技术优势)
      - [<span class="iconfont icon-star"></span> 功能对比](guide/#fire-功能对比)
      - [<span class="iconfont icon-mix"></span> 界面预览](guide/#art-界面预览)
   - [<span class="iconfont icon-router"></span> 快速入门](guide/begin.md)
      - [<span class="iconfont icon-matrix"></span> 安装网关](guide/begin?id=lemon安装网关)
-     - [<span class="iconfont icon-crown"></span> 装客户端](guide/begin?id=melon装客户端)
+     - [<span class="iconfont icon-fly"></span> 装客户端](guide/begin?id=melon装客户端)
      - [<span class="iconfont icon-wxapp"></span> 开始使用](guide/begin?id=peach开始使用)
   - [<span class="iconfont icon-nut"></span> 使用场景](guide/usage.md)
      - [<span class="iconfont icon-component"></span> 身份认证](guide/usage?id=key-身份认证)
