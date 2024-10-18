@@ -28,7 +28,7 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 
 
 
-##  :melon:安装客户端 <!-- {docsify-ignore} -->
+##  :melon:装客户端 <!-- {docsify-ignore} -->
 
 ?> 天机客户端支持Windows、Linux、macOS系统。天机支持有客户端模式和无客户端模式，如若不安装客户端则需要手工推送根证书安装到终端电脑，并在防火墙或路由器上将80、443端口流量重定向到天机网关ip。
 
