@@ -4,10 +4,10 @@
 
 
 
-##  :lemon:安装网关
+##  :lemon:安装网关 <!-- {docsify-ignore} -->
 ?> 如有疑问，可加入 [有安科技微信群](https://waf.uusec.com/_media/weixin.jpg) 与社区用户共同讨论，或在 [天机论坛](https://github.com/Safe3/tianji/discussions) 内发帖求助。
 
-### 环境要求
+### 环境要求 <!-- {docsify-ignore} -->
 
 安装天机前请确保你的系统环境符合以下要求
 
@@ -16,7 +16,7 @@
 - CPU 指令架构：支持 ssse3 指令集
 - 最低资源需求：1 核 CPU / 1 GB 内存 / 5 GB 磁盘
 
-### 自动安装
+### 自动安装 <!-- {docsify-ignore} -->
 
 必须提前准备一个可以通过SMTP发送邮件的邮箱账号(注意：大部分免费邮箱需要单独开通SMTP功能，并需要设置专用密码才能登录，这里推荐 [完美邮箱](https://www.88.com/) )，安装过程中需要配置使用。以 root 权限执行以下命令，根据命令提示输入相关配置信息，几分钟即可完成自动安装。
 
@@ -28,11 +28,11 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 
 
 
-##  :melon:安装客户端
+##  :melon:安装客户端 <!-- {docsify-ignore} -->
 
 ?> 天机客户端支持Windows、Linux、macOS系统。天机支持有客户端模式和无客户端模式，如若不安装客户端则需要手工推送根证书安装到终端电脑，并在防火墙或路由器上将80、443端口流量重定向到天机网关ip。
 
-### 环境要求
+### 环境要求 <!-- {docsify-ignore} -->
 
 安装天机客户端前请确保你的系统环境符合以下要求
 
@@ -40,13 +40,13 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 - Linux系统：Ubuntu 22.04+ AMD64/ARM64
 - 苹果系统：macOS 10.13+ AMD64、macOS 11.0+ ARM64
 
-### 下载安装
+### 下载安装 <!-- {docsify-ignore} -->
 
 - 微软系统：[https://tianji.uusec.com/download/latest/tianji-setup.exe](https://tianji.uusec.com/download/latest/tianji-setup.exe)
 - 苹果系统：[https://tianji.uusec.com/download/latest/tianji-setup.pkg](https://tianji.uusec.com/download/latest/tianji-setup.pkg)
 - Linux系统：仅供商业用户
 
-### 开始使用
+### 开始使用 <!-- {docsify-ignore} -->
 
 提前在手机上安装一个动态口令软件如 [FreeOTP](https://freeotp.github.io/) 或 Google Authenticator 等
 
