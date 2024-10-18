@@ -4,7 +4,7 @@
 
 
 
-##  :lemon:安装网关 <!-- {docsify-ignore} -->
+##  :lemon:安装网关
 ?> 如有疑问，可加入 [有安科技微信群](https://waf.uusec.com/_media/weixin.jpg) 与社区用户共同讨论，或在 [天机论坛](https://github.com/Safe3/tianji/discussions) 内发帖求助。
 
 ### 环境要求
@@ -28,7 +28,7 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 
 
 
-##  :melon:安装客户端<!-- {docsify-ignore} -->
+##  :melon:安装客户端
 
 ?> 天机客户端支持Windows、Linux、macOS系统。天机支持有客户端模式和无客户端模式，如若不安装客户端则需要手工推送根证书安装到终端电脑，并在防火墙或路由器上将80、443端口流量重定向到天机网关ip。
 
