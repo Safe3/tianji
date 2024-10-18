@@ -1,11 +1,11 @@
 # 快速入门
 
-!> 天机主要由两部分组成：天机网关以及天机客户端。网关用于身份管理、单点登录、双因素认证、DNS安全、云访问安全代理、安全Web网关、数据防泄漏等，可以集中管理并过滤网络流量，客户端负责终端安全、根证书安装、流量代理等功能。
+?> 天机主要由两部分组成：天机网关以及天机客户端。网关用于身份管理、单点登录、双因素认证、DNS安全、云访问安全代理、安全Web网关、数据防泄漏等，可以集中管理并过滤网络流量，客户端负责终端安全、根证书安装、流量代理等功能。
 
 
 
 ##  :lemon:安装网关 <!-- {docsify-ignore} -->
-?> 如有疑问，可加入 [有安科技微信群](https://waf.uusec.com/_media/weixin.jpg) 与社区用户共同讨论，或在 [天机论坛](https://github.com/Safe3/tianji/discussions) 内发帖求助。
+!> 如有疑问，可加入 [有安科技微信群](https://waf.uusec.com/_media/weixin.jpg) 与社区用户共同讨论，或在 [天机论坛](https://github.com/Safe3/tianji/discussions) 内发帖求助。
 
 ### 环境要求 <!-- {docsify-ignore} -->
 
@@ -18,7 +18,7 @@
 
 ### 自动安装 <!-- {docsify-ignore} -->
 
-必须提前准备一个可以通过SMTP发送邮件的邮箱账号(注意：大部分免费邮箱需要单独开通SMTP功能，并需要设置专用密码才能登录，这里推荐 [完美邮箱](https://www.88.com/) )，安装过程中需要配置使用。以 root 权限执行以下命令，根据命令提示输入相关配置信息，几分钟即可完成自动安装。
+!> 必须提前准备一个可以通过SMTP发送邮件的邮箱账号(注意：大部分免费邮箱需要单独开通SMTP功能，并需要设置专用密码才能登录，这里推荐 [完美邮箱](https://www.88.com/) )，安装过程中需要配置使用。以 root 权限执行以下命令，根据命令提示输入相关配置信息，几分钟即可完成自动安装。
 
 ```bash
 bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
@@ -48,7 +48,7 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 
 ### 开始使用 <!-- {docsify-ignore} -->
 
-提前在手机上安装一个动态口令软件如 [FreeOTP](https://freeotp.github.io/) 或 Google Authenticator 等
+!> 提前在手机上安装一个动态口令软件如 [FreeOTP](https://freeotp.github.io/) 或 Google Authenticator 等
 
 - 运行后点击”网关设置“按钮，在设置界面输入网关ip地址，然后依次点击”应用“、”确定“按钮。
 - 点击”登录注册“按钮，在打开的浏览器中输入邮箱后点击”注册“按钮发送验证码，将邮件收到的验证码输入下方输入框，点击”验证“按钮。
