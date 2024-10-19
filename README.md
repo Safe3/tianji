@@ -89,7 +89,7 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 
 - 微软系统：[https://tianji.uusec.com/download/latest/tianji-setup.exe](https://tianji.uusec.com/download/latest/tianji-setup.exe)
 - 苹果系统：[https://tianji.uusec.com/download/latest/tianji-setup.pkg](https://tianji.uusec.com/download/latest/tianji-setup.pkg)
-- Linux系统：仅供商业用户
+- Linux系统：仅供商业定制用户
 
 
 
