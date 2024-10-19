@@ -82,8 +82,8 @@ bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
 安装天机客户端前请确保你的系统环境符合以下要求
 
 - 微软系统：Windows 10/11 AMD64/ARM64
-- Linux系统：Ubuntu 22.04+ AMD64/ARM64
 - 苹果系统：macOS 10.13+ AMD64、macOS 11.0+ ARM64
+- Linux系统：Ubuntu 22.04+ AMD64/ARM64
 
 ### 下载安装 <!-- {docsify-ignore} -->
 
