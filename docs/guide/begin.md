@@ -23,7 +23,7 @@
 以 root 权限执行以下命令，根据命令提示输入相关配置信息，几分钟即可完成自动安装。
 
 ```bash
-bash -c "$(curl -fsSLk https://tianji.uusec.com/download/latest/setup.sh)"
+bash -c "$(curl -fsSL https://tianji.uusec.com/download/latest/setup.sh)"
 ```
 
 安装成功后会有提示信息，现在你需要安装客户端了
