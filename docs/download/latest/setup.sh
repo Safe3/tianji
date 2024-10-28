@@ -127,7 +127,7 @@ check_depend() {
     fi
     cat /proc/cpuinfo | grep ssse3 > /dev/null 2>&1
     if [ $support_ssse3 -eq "0" -a $? -ne "0" ]; then
-      abort "雷池需要运行在支持 ssse3 指令集的 CPU 上，虚拟机请自行配置开启 CPU ssse3 指令集支持"
+      abort "天机需要运行在支持 ssse3 指令集的 CPU 上，虚拟机请自行配置开启 CPU ssse3 指令集支持"
     fi
     if [ -z "$BASH" ]; then
         abort "请用 bash 执行本脚本，请参考最新的官方技术文档 https://tianji.uusec.com/"
