@@ -277,14 +277,14 @@ fi
 info "创建安装目录 '$tianji_path' 成功"
 cd "$tianji_path"
 
-curl "https://tianji.uusec.com/download/latest/compose.yaml" -sSLk -o compose.yaml
+curl "https://tianji.uusec.com/download/latest/compose.yaml" -sSL -o compose.yaml
 if [ $? -ne "0" ]; then
     abort "下载 compose.yaml 脚本失败"
 fi
 info "下载 compose.yaml 脚本成功"
-curl "https://tianji.uusec.com/download/latest/admin.sh" -sSLk -o admin.sh
+curl "https://tianji.uusec.com/download/latest/admin.sh" -sSL -o admin.sh
 chmod +x admin.sh
-curl "https://tianji.uusec.com/download/latest/resources.tgz" -sSLk -o resources.tgz
+curl "https://tianji.uusec.com/download/latest/resources.tgz" -sSL -o resources.tgz
 if [ -z `command_exists tar` ]; then
     $( command -v yum || command -v apt-get ) install -y tar
 fi
