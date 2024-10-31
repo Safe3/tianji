@@ -43,6 +43,7 @@ services:
       - /etc/resolv.conf:/etc/resolv.conf:ro
       - ${TIANJI_DIR}/resources/config.json:/uuwaf/config.json
       - ${TIANJI_DIR}/resources/uuwaf.conf:/uuwaf/conf/uuwaf.conf
+      - ${TIANJI_DIR}/resources/cert:/uuwaf/cert
       - ${TIANJI_DIR}/resources/dns/conf:/uuwaf/dns/conf
       - ${TIANJI_DIR}/resources/cache:/uuwaf/cache
     environment:
