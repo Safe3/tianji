@@ -238,6 +238,11 @@ for subnet in $subnets; do
     fi
 done
 
+if [ -f '/etc/systemd/resolved.conf' ]; then
+    sed -r -i.orig 's/^#?DNSStubListener=.+$/DNSStubListener=no/g' /etc/systemd/resolved.conf
+    systemctl restart systemd-resolved
+fi
+
 if [ -z `command_exists netstat` ]; then
     $( command -v yum || command -v apt-get ) install -y net-tools
 fi
