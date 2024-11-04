@@ -106,7 +106,7 @@ install_docker() {
     if [ $? -ne "0" ]; then
         echo "自动安装Docker Engine失败, 请参考如下文档手工安装Docker运行环境"
         echo "参考文档: https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance"
-        abort "Docker 安装失败"
+        abort "Docker Engine安装失败"
     fi
     info "Docker 安装成功"
 }
