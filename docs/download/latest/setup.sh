@@ -104,8 +104,8 @@ install_docker() {
     start_docker
     docker version > /dev/null 2>&1
     if [ $? -ne "0" ]; then
-        echo "Docker 安装失败, 请检查网络连接或手动安装 Docker"
-        echo "参考文档: https://docs.docker.com/engine/install/"
+        echo "自动安装Docker Engine失败, 请参考如下文档手工安装Docker运行环境"
+        echo "参考文档: https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance"
         abort "Docker 安装失败"
     fi
     info "Docker 安装成功"
@@ -142,8 +142,8 @@ check_depend() {
     fi
 
     if [ -z `command_exists docker` ]; then
-        warning "缺少 Docker 环境"
-        if confirm "是否需要自动安装 Docker"; then
+        warning "缺少Docker运行环境 Docker Engine"
+        if confirm "是否需要自动安装 Docker Engine"; then
             install_docker
         else
             abort "中止安装"
