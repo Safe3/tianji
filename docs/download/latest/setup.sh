@@ -309,7 +309,7 @@ echo "TIANJI_DIR=$tianji_path" >> .env
 echo "IMAGE_TAG=latest" >>".env"
 echo "POSTGRES_PASSWORD=$(LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 32)" >> .env
 echo "SUBNET_PREFIX=$SUBNET_PREFIX" >> .env
-echo "IMAGE_PREFIX=swr.cn-south-1.myhuaweicloud.com/uusec" >>".env"
+echo "IMAGE_PREFIX=swr.ap-southeast-1.myhuaweicloud.com/uusec" >>".env"
 
 while true; do
     echo -e -n "\033[34m[天机] 请输入邮件服务器地址: \033[0m"
