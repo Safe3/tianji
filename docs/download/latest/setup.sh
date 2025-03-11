@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 echo "
   _____  ___     _     _   _      _  ___ 
@@ -315,7 +315,7 @@ while true; do
     echo -e -n "\033[34m[天机] 请输入邮件服务器地址: \033[0m"
     read tianji_mail_server
     if [[ ! $tianji_mail_server == *:* ]]; then
-        warning "'$tianji_mail_server' 不是完整的邮件服务器地址"
+        warning "'$tianji_mail_server' 不是完整的邮件服务器地址，请使用 smtp.example.com:port 格式"
         continue
     fi
     echo "TIANJI_MAIL_SERVER=$tianji_mail_server" >> .env
@@ -326,7 +326,7 @@ while true; do
     echo -e -n "\033[34m[天机] 请输入邮件用户名称: \033[0m"
     read tianji_mail_username
     if [[ ! $tianji_mail_username == *@* ]]; then
-        warning "'$tianji_mail_username' 不是完整的邮件用户名称"
+        warning "'$tianji_mail_username' 不是完整的邮件用户名称，请使用 username@example.com 格式"
         continue
     fi
     echo "TIANJI_MAIL_USERNAME=$tianji_mail_username" >> .env
